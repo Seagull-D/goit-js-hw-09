@@ -27,3 +27,6 @@
   justify-content: center;
   gap: 24px;
 }
+
+.sl-wrapper div.sl-counter {
+  color: blue;}

@@ -1,4 +1,6 @@
 "use strict"
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 const images = [
   {
@@ -95,5 +97,11 @@ function onClick(evt) {
     if (evt.target === evt.currentTarget) {
         return;
     }
+    const litebox = new SimpleLightbox('.gallery a', { 
+        captionsData: "alt",
+        captionPosition: "bottom",
+        captionDelay: 250,
+        cuptions: true,
+    });
 }
-
+litebox.refresh();
