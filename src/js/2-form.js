@@ -1,10 +1,11 @@
 "use strict"
 
 
-const formData = {
+let formData = {
     email: "",
     message: "",
-    }
+}
+    const localKay = "feedback-form-state"
 
 const form = document.querySelector(".feedback-form")
 
@@ -12,36 +13,40 @@ const form = document.querySelector(".feedback-form")
 form.addEventListener("submit", toSubmit);
 form.addEventListener("input", onInput);
 
-function toSubmit(evt) {
-  evt.preventDefault();
-console.log(evt.target)
-    const { email, message } = evt.currentTarget.elements;
-const checkErrorMessage = form.querySelector(".errorMsg");
-  if (checkErrorMessage) {
-    checkErrorMessage.remove();
-  }
-    if (email.value.trim() === "" || message.value.trim() === "") {
-        const errorMessege = `<p class="errorMsg">Не всі поля заповнені</p>`
-       
-        form.insertAdjacentHTML("beforeend", errorMessege);
-        
-    } else {
-         formData.email = this.email.value,
-            formData.message = this.message.value
-        console.log(formData)
-        
-    }
+function onInput(evt) {
   
+  const { name, value } = evt.target
+  if (name === "email" || name === "message") {
+
+    formData[name] = value.trim()
+
+    localStorage.setItem(localKay, JSON.stringify(formData))
+  }
+ 
+  }
+  
+
+
+function toSubmit(evt) {
+evt.preventDefault();
+ 
+  const errorMsg = document.querySelector('.errorMsg');
+  if (errorMsg) {
+    errorMsg.remove();
+  }
+
+  if (!formData.email || !formData.message) {
+    const errorMessage = `<p class="errorMsg">Fill please all fields !!!</p>`;
+    form.insertAdjacentHTML("beforeend", errorMessage);
+    
+  } else {
+    
+    console.log(formData);
+       localStorage.removeItem('feedback-form-state');
+       formData.email = "";
+       formData.message = "";
     
     this.reset();
   }
+}
 
-function onInput(evt) {
-   console.log(evt.target)
-   
-      
-        if (evt.target.value === " ") {
-           evt.target.classList.add("errorColor")
-     console.log(evt.target)
-             }
-    }
