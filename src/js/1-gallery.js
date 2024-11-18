@@ -88,20 +88,14 @@ function createHtmlEl(arr) {
     )
     .join("");
 }
-console.log(gallery);
 
-gallery.addEventListener("click", onClick);
 
-function onClick(evt) {
-    evt.preventDefault();
-    if (evt.target === evt.currentTarget) {
-        return;
-    }
+
     const litebox = new SimpleLightbox('.gallery a', { 
         captionsData: "alt",
         captionPosition: "bottom",
         captionDelay: 250,
         cuptions: true,
     });
-}
-litebox.refresh();
+
+

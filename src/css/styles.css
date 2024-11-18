@@ -27,6 +27,26 @@
   justify-content: center;
   gap: 24px;
 }
-
+.sl-wrapper{
+  background: #2E2F42CC;
+}
 .sl-wrapper div.sl-counter {
-  color: blue;}
+  color: #FFFFFF};
+
+ .sl-wrapper .sl-navigation button.sl-prev {
+    color: #FFFFFF;
+      
+  }
+ .simple-lightbox button.sl-close  {
+     
+      color: #FFFFFF;
+    }
+
+        .simple-lightbox .sl-navigation button.sl-next {
+        
+           color: #FFFFFF;
+         }
+                    .simple-lightbox .sl-navigation button.sl-prev {
+          
+                      color: #FFFFFF;
+                    }
