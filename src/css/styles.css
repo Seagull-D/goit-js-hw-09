@@ -50,3 +50,49 @@
           
                       color: #FFFFFF;
                     }
+
+
+/*------------------FORM---------------*/
+
+
+
+.feedback-form{
+
+  margin:auto;
+   display: flex;
+  flex-direction: column;
+  width: 408px;
+  padding: 24px;
+border-radius: 8px;
+background-color: rgb(232, 252, 253);
+}
+
+.feedback-form label{
+  display: flex;
+  flex-direction:column ;
+  gap: 8px;
+}
+.feedback-form input {
+  border-radius: 4px;
+  
+    height: 40px;
+       border: 1px solid;
+       margin-bottom: 8px;
+}
+.feedback-form textarea {
+  border: 1px solid;
+    margin-bottom: 16px;
+}
+.feedback-form button{
+width:95px;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  gap: 10px;
+  border-radius: 8px;
+  background-color: #4E75FF;
+  color: #FFFFFF;
+
+}
+.errorColor{
+  border: 1 solid red;
+}
