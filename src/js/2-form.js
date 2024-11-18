@@ -43,6 +43,7 @@ evt.preventDefault();
   if (!formData.email || !formData.message) {
     const errorMessage = `<p class="errorMsg">Fill please all fields !!!</p>`;
     form.insertAdjacentHTML("beforeend", errorMessage);
+   
     
   } else {
     
