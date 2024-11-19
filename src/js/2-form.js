@@ -8,12 +8,10 @@ let formData = {
 const localKay = "feedback-form-state"
 
 const form = document.querySelector(".feedback-form")
-console.dir(form)
+
 const input = document.querySelector('input[name="email"]');
 const texArea = document.querySelector('textarea[name="message"]');
 
-console.dir(input)
-console.dir(texArea)
 form.addEventListener("submit", toSubmit);
 form.addEventListener("input", onInput);
 isText()
