@@ -61,7 +61,7 @@
   margin:auto;
    display: flex;
   flex-direction: column;
-  width: 408px;
+ max-width:408px; 
   padding: 24px;
 border-radius: 8px;
 background-color: rgb(232, 252, 253);
@@ -102,3 +102,25 @@ width:95px;
   color:red;
  
 }
+
+/*------------------idx-------------------*/
+.container-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:100px ; 
+  gap: 35px;
+  }
+
+.go-gallery{
+  display: block;
+  text-align: center ;
+margin: auto;
+
+    width:95px;
+
+    padding: 8px 16px 8px 16px;
+    gap: 10px;
+    border-radius: 8px;
+    background-color: #eb6d25;
+    color: #FFFFFF;}
