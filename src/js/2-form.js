@@ -16,6 +16,20 @@ form.addEventListener("submit", toSubmit);
 form.addEventListener("input", onInput);
 isText()
 
+function isText() {
+  const inputMessage = localStorage.getItem(localKay)
+  const inputMessageArr = JSON.parse(inputMessage)
+  formData = inputMessageArr || {email: "", message: ""}
+  const {email,message} = formData
+  if (email) {
+        input.value = email
+      }
+    if (message) {
+        texArea.value = message
+  }
+ 
+}
+
 function onInput(evt) {
   
   const { name, value } = evt.target
@@ -63,17 +77,7 @@ evt.preventDefault();
   
 }
 
-function isText() {
-  const inputMessage = localStorage.getItem(localKay)
 
-  if (inputMessage) {
-    const  inputMessageArr =JSON.parse(inputMessage)
-    input.value = inputMessageArr.email
-    texArea.value = inputMessageArr.message
-   
-}
-    
-}
 
 
 
